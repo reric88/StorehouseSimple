@@ -88,7 +88,7 @@ body {
 }
 
 .home-bg {
-    background-image: url('../Images/storehouse2.jpg');
+    background-image: url('Images/storehouse2.jpg');
     background-position-y: -20rem;
     position: fixed;
     transition: opacity 300ms;
@@ -96,7 +96,7 @@ body {
 }
 
 .menu-bg {
-    background-image: url('../Images/charcuterie3.jpg');
+    background-image: url('Images/charcuterie3.jpg');
     transition: opacity 300ms;
     background-size: cover;
     position: fixed;
@@ -106,7 +106,7 @@ body {
 }
 
 .shop-bg {
-    background-image: url('../Images/storehouse4.jpg');
+    background-image: url('Images/storehouse4.jpg');
     transition: opacity 400ms;
     background-size: cover;
     position: fixed;
@@ -115,7 +115,7 @@ body {
 }
 
 .catering-bg {
-    background-image: url('../Images/cookie1.jpg');
+    background-image: url('Images/cookie1.jpg');
     transition: opacity 300ms;
     /* opacity: .6; */
     position: fixed;
@@ -126,7 +126,7 @@ body {
 }
 
 .about-bg {
-    background-image: url('../Images/storehouse5.jpg');
+    background-image: url('Images/storehouse5.jpg');
     transition: opacity 300ms;
     /* opacity: .6; */
     position: fixed;
@@ -145,7 +145,7 @@ body {
 
 /* #region about-bg with old photo */
 /* .about-bg {
-    background-image: url('../Images/moormanExtended.png');
+    background-image: url('Images/moormanExtended.png');
     transition: opacity 300ms;
     background-size: 75%;
     background-repeat: no-repeat;
@@ -162,13 +162,13 @@ body {
     position: absolute;
     z-index: -1;
     filter: blur(6px);
-    background-image: url('../Images/moormanExtended.png');
+    background-image: url('Images/moormanExtended.png');
 } */
 /* #endregion */
 
 
 .cart-bg {
-    background-image: url('../Images/storehouse3.jpg');
+    background-image: url('Images/storehouse3.jpg');
     transition: opacity 300ms;
     /* opacity: .6; */
     position: fixed;
@@ -179,7 +179,7 @@ body {
 }
 
 .hours-bg {
-    background-image: url('../Images/storehouse1.jpg');
+    background-image: url('Images/storehouse1.jpg');
     transition: opacity 300ms;
     /* opacity: .6; */
     position: fixed;
