@@ -37,7 +37,7 @@ navLinks.forEach(link=>{
                 menuContent.classList.remove('content-not-visible')
                 backgrounds.className = 'menu-bg'
                 
-                getItem()
+                getAndDeleteMenu()
             }, 300);
 
         } else if (link.id == 'shop'){
@@ -263,6 +263,11 @@ async function getItem(i){
 
 deleteMenu = () =>{
     menuContainer.innerHTML = ''
+}
+
+getAndDeleteMenu = () =>{
+    menuContainer.innerHTML = ''
+    getItem()
 }
 
 // getItem()
