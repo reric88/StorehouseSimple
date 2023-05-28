@@ -13,14 +13,20 @@ const navBtn = document.querySelector('#mobile-nav-button')
 const bar1 = document.querySelector('#bar-1')
 const bar2 = document.querySelector('#bar-2')
 const bar3 = document.querySelector('#bar-3')
+const mobNavItems = document.querySelectorAll('.mobile-link')
+const blurElement = document.querySelector('#blur-element')
 
 navClicked = () =>{
-    navBtn.addEventListener('click', ()=>{
+    // navBtn.addEventListener('click', ()=>{
         bar1.classList.toggle('bar-1-clicked')
         bar2.classList.toggle('bar-2-clicked')
         bar3.classList.toggle('bar-3-clicked')
-        backgrounds.classList.toggle('blurred')
-    })
+        // backgrounds.classList.toggle('blurred')
+        blurElement.classList.toggle('blurred-active')
+        mobNavItems.forEach(item=>{
+            item.classList.toggle('inactive')
+        })
+    // })
 }
 
 
@@ -30,10 +36,11 @@ navClicked = () =>{
 // #region navbar
 navLinks.forEach(link=>{
     link.addEventListener('click',()=>{
+        navClicked()
         if (link.id != 'menu'){
             deleteMenu();
         };
-        if (link.id == 'home'){
+        if (link.className.includes('home')){
             backgrounds.classList.add('fade')
             setTimeout(() => {
                 mainContent.forEach(card=>{
@@ -44,7 +51,7 @@ navLinks.forEach(link=>{
                 backgrounds.className = 'home-bg'
             }, 300);
 
-        } else if (link.id == 'menu'){
+        } else if (link.className.includes('menu')){
             backgrounds.classList.add('fade')
             setTimeout(() => {
                 mainContent.forEach(card=>{
@@ -58,7 +65,7 @@ navLinks.forEach(link=>{
                 getAndDeleteMenu()
             }, 300);
 
-        } else if (link.id == 'shop'){
+        } else if (link.className.includes('shop')){
             backgrounds.classList.add('fade')
             setTimeout(() => {
                 mainContent.forEach(card=>{
@@ -70,7 +77,7 @@ navLinks.forEach(link=>{
                 backgrounds.className = 'shop-bg'
             }, 300);
 
-        } else if (link.id == 'catering'){
+        } else if (link.className.includes('catering')){
             backgrounds.classList.add('fade')
             setTimeout(() => {
                 mainContent.forEach(card=>{
@@ -82,7 +89,7 @@ navLinks.forEach(link=>{
                 backgrounds.className = 'catering-bg'
             }, 300);
 
-        } else if (link.id == 'about'){
+        } else if (link.className.includes('about')){
             backgrounds.classList.add('fade')
             setTimeout(() => {
                 mainContent.forEach(card=>{
@@ -94,7 +101,7 @@ navLinks.forEach(link=>{
                 backgrounds.className = 'about-bg'
             }, 300);
             
-        } else if (link.id == 'cart'){
+        } else if (link.className.includes('cart')){
             backgrounds.classList.add('fade')
             setTimeout(() => {
                 mainContent.forEach(card=>{
@@ -106,7 +113,7 @@ navLinks.forEach(link=>{
                 backgrounds.className = 'cart-bg'
             }, 300);
 
-        } else if (link.id == 'hours'){
+        } else if (link.className.includes('hours')){
             backgrounds.classList.add('fade')
             setTimeout(() => {
                 mainContent.forEach(card=>{
