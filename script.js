@@ -19,10 +19,10 @@ navClicked = () =>{
         bar1.classList.toggle('bar-1-clicked')
         bar2.classList.toggle('bar-2-clicked')
         bar3.classList.toggle('bar-3-clicked')
+        backgrounds.classList.toggle('blurred')
     })
 }
 
-navClicked()
 
 
 
