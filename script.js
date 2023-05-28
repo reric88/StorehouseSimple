@@ -9,6 +9,24 @@ const cateringContent = document.querySelector('#catering-content')
 const aboutContent = document.querySelector('#about-content')
 const cartContent = document.querySelector('#cart-content')
 const menuContainer = document.querySelector('#menu-content')
+const navBtn = document.querySelector('#mobile-nav-button')
+const bar1 = document.querySelector('#bar-1')
+const bar2 = document.querySelector('#bar-2')
+const bar3 = document.querySelector('#bar-3')
+
+navClicked = () =>{
+    navBtn.addEventListener('click', ()=>{
+        bar1.classList.toggle('bar-1-clicked')
+        bar2.classList.toggle('bar-2-clicked')
+        bar3.classList.toggle('bar-3-clicked')
+    })
+}
+
+navClicked()
+
+
+
+
 // #region navbar
 navLinks.forEach(link=>{
     link.addEventListener('click',()=>{
@@ -237,17 +255,10 @@ async function getMenu(item){
     const danish = menu.data.bakedGoods.danish
     const coffee = menu.data.beverage.coffee
     const espresso = menu.data.beverage.espresso
-    // console.log(coffee.coffee.length);
-    // console.log(coffee[item].name);
-    // console.log(coffee[item].description);
-    // console.log(coffee[item].size);
-    // console.log(coffee[item].price);
     console.log(item);
     createMenuItem(espresso[item])
-    // createMenuItem(data)
 
 }
-// getMenu(1)
 
 async function getItem(i){
     const menu = await axios.get(url);
