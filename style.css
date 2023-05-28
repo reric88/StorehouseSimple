@@ -311,26 +311,87 @@ nav a:hover {
     transition: transform 300ms ease;
 }
 
-#menu-content {
+/* #menu-content {
     min-width: 50%;
-    /* max-width: 90%; */
     min-height: 70%;
     top: 0rem;
     margin: 15rem 15rem;
     background-color: #fff8;
-    /* color: var(--cream); */
     font-family: var(--secondary-font);
     border: 1rem solid #fffa;
-    /* outline: 1rem double white; */
     border-radius: .5rem;
     display: flex;
     flex-wrap: wrap;
-    /* flex-direction: column; */
-    /* align-items: center; */
     justify-content: center;
     padding: 2rem;
     transition: transform 200ms ease;
     
+} */
+
+#menu-content {
+    width: 100%;
+    height: 90%;
+    top: 0rem;
+    margin-top: 5rem;
+    background-color: #fff8;
+    font-family: var(--secondary-font);
+    /* border: 1rem solid #fffa; */
+    border-radius: .5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+    transition: transform 200ms ease;
+    overflow: hidden;
+    
+}
+
+#menu-window {
+    width: 100%;
+    background-color: #f004;
+    transform: translateX(-100%);
+}
+
+.menu-sheet {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0f04;
+}
+
+.menu-tab {
+    writing-mode:vertical-lr;
+    background-color: #f00;
+    position: absolute;
+    width: 4rem;
+    padding: 1rem 0;
+    right: -4rem;
+    border-radius: 0 1rem 1rem 0;
+    font-size: 2rem;
+    font-family: var(--secondary-font);
+    font-weight: 600;
+}
+
+#coffee-tab {
+
+}
+
+#espresso-tab {
+    transform: translateY(11rem);
+}
+
+#other-tab {
+    transform: translateY(24.5rem);
+}
+
+#baked-tab {
+    transform: translateY(41.5rem);
+}
+
+#charcuterie-tab {
+    transform: translateY(59.4rem);
 }
 
 #shop-content {
@@ -574,6 +635,10 @@ h4 {
         font-size: 50%; 
     }
 
+    #menu-content {
+        margin-top: 5rem;
+    }
+
     #about-content {
         width: 80%;
     }
@@ -585,6 +650,10 @@ h4 {
 @media (width < 800px) {
     * {
         font-size: 40%;
+    }
+
+    #menu-content {
+        margin-top: 10rem; 
     }
 
     .home-bg {
