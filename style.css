@@ -378,9 +378,8 @@ nav a:hover {
     font-weight: 600;
 }
 
-#coffee-tab {
-
-}
+/* #coffee-tab {
+} */
 
 #espresso-tab {
     transform: translateY(11rem);
