@@ -666,6 +666,7 @@ h4 {
 
     #desktop-nav {
         visibility: hidden;
+        display: none;
     }
 
     #navbar {
